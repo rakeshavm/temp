@@ -1,26 +1,32 @@
 import React from "react";
 import logo from './../../svg/poly.svg'
-import { bubble as Menu } from "react-burger-menu";
+import { stack as Menu } from "react-burger-menu";
 
-export default props => {
-  return (
-    <Menu>
-      <img src="logo"></img>
-      <a className="menu-item" href="/">
+class Sidebar extends React.Component {
+
+  handleNavigate = (event)=>{
+    console.log(event.target.id)
+    this.props.navigate('/'+event.target.id)
+  }
+
+  render(){
+  let list = [
+    <div className="menu-item" id={""} onClick={this.handleNavigate}>
         Home
-      </a>
-
-      <a className="menu-item" href="/burgers">
-        Burgers
-      </a>
-
-      <a className="menu-item" href="/pizzas">
-        Pizzas
-      </a>
-
-      <a className="menu-item" href="/desserts">
-        Desserts
-      </a>
+      </div>,
+      <div className="menu-item" id={"about"} onClick={this.handleNavigate}>
+        About
+      </div>,
+      <div className="menu-item" id={"contact"} onClick={this.handleNavigate}>
+        Contact Us
+      </div>
+  ]
+  return (
+    <Menu right='true'>
+      {list}
     </Menu>
   );
+  }
 };
+
+export default Sidebar;
