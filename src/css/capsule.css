@@ -1,0 +1,24 @@
+.capsule{
+    height:30vh;
+    cursor: pointer;
+    transition: transform .2s;
+    display: inline-block
+}
+
+.capsule:hover{
+    transform: scale(1.05);
+}
+
+.align-center{
+    text-align: center;
+}
+
+.main-class{
+    text-align: center;
+    width:50vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }

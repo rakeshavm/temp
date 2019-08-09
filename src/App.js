@@ -5,6 +5,8 @@ import Home from './js/container/home';
 import './css/sidebar.css';
 import Contact from './js/container/contact.js';
 import AboutUs from './js/container/aboutus.js';
+import Test from './js/components/picbubble';
+
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
        <Home path='/'/>
        <Contact path='/contact'/> 
        <AboutUs path='/about'/>
+       <Test path='/test'/>
+
+       
      </Router>
     </div>
   );
