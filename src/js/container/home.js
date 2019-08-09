@@ -5,6 +5,7 @@ import Landing from '../components/landing';
 import Sidebar from './../components/sidebar';
 import {navigate} from '@reach/router';
 // import {Pager} from 'react-bootstrap';
+import EventsPage from '../components/eventspage'
 
 
 class Home extends React.Component{
@@ -24,14 +25,17 @@ class Home extends React.Component{
         return(
             <div>
                 <Sidebar navigate={navigate}/>
+                {/* <EventsPage /> */}
                 <ReactPageScroller ref={c => this.reactPageScroller = c}>
                     <Landing/>
                     {(this.state.show)?<Landing/>:null}
-                    {/* <Landing/> */}
+                    {/* <Landing/>*/}
 
-                </ReactPageScroller>
+                 </ReactPageScroller> 
             </div>
         )
     }
 }
+
+
 export default Home;

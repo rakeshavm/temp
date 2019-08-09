@@ -1,0 +1,62 @@
+.eventcard{
+    background: lightgrey;
+    border-radius: 10px;
+    width: 30vw;
+    min-width:300px;
+    text-align: center;
+    
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(250,156,42,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(250,156,42,1);
+    box-shadow: 0px 0px 15px 2px rgba(250,156,42,1);
+}
+
+.event-img{
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.content-div{
+    padding:20px;
+}
+
+.explorebtn {
+    border-radius: 50px;
+    background-color: #000000;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    /* margin: 36px; */
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  .explorebtn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .explorebtn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .explorebtn:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .explorebtn:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
