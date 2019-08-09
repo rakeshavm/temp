@@ -1,5 +1,5 @@
 import React from "react";
-import logo from './../../svg/poly.svg'
+// import logo from './../../svg/poly.svg'
 import { stack as Menu } from "react-burger-menu";
 
 class Sidebar extends React.Component {
@@ -19,6 +19,9 @@ class Sidebar extends React.Component {
       </div>,
       <div className="menu-item" id={"contact"} onClick={this.handleNavigate}>
         Contact Us
+      </div>,
+      <div className="menu-item" id={"eventpage/hackathon"} onClick={this.handleNavigate}>
+        Event
       </div>
   ]
   return (

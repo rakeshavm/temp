@@ -1,5 +1,5 @@
 .eventcard{
-    background: lightgrey;
+    background: linear-gradient(to right, #c76316, #e98f18);
     border-radius: 10px;
     width: 30vw;
     min-width:300px;
@@ -32,7 +32,7 @@
     transition: all 0.5s;
     cursor: pointer;
     /* margin: 36px; */
-    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
   }
   
   .explorebtn{
@@ -59,4 +59,14 @@
   .explorebtn:hover:after {
     opacity: 1;
     right: 10px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .event-center{
+    text-align: center;
   }

@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import {Router} from '@reach/router';
 import Home from './js/container/home';
 import './css/sidebar.css';
 import Contact from './js/container/contact.js';
-import AboutUs from './js/container/aboutus.js';
 import Test from './js/components/picbubble';
-
+import EventsPage from './js/container/eventspage';
+import Departments from './js/components/deptspage';
 
 function App() {
   return (
@@ -14,8 +14,9 @@ function App() {
      <Router>
        <Home path='/'/>
        <Contact path='/contact'/> 
-       <AboutUs path='/about'/>
        <Test path='/test'/>
+       <EventsPage path='/eventpage/:id'/>
+       <Departments path='/department/:id'/>
 
        
      </Router>

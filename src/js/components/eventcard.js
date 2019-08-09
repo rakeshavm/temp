@@ -1,6 +1,5 @@
 import React from 'react';
 import {event} from './../../data/event';
-import { TimelineLite } from 'gsap';
 import hackathon from './../../images/car.jpg';
 import './../../css/eventcard.css';
 import { navigate } from '@reach/router/lib/history';
@@ -16,7 +15,7 @@ class EventCard extends React.Component{
         return(
             <div className="content-div">
                 <div className="eventcard">
-                        <img className="event-img" src={hackathon}/>
+                        <img className="event-img" alt="nitin" src={hackathon}/>
                         <div className="content-div">
                             <h3>{event.name}</h3>
                             <p>{event.desc}</p>

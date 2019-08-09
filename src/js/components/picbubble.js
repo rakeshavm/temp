@@ -33,7 +33,7 @@ class PicBubble extends React.Component{
         main = list.map((ele)=>{
             return(
                 <div className="main-class">
-                    <img src={capsule} className="capsule" id="name1" onClick={this.handleClick}/>
+                    <img src={capsule} className="capsule" id="name1" alt="nitin" onClick={this.handleClick}/>
                     <div className="align-center">
                         <h3>Nitin Nikamanth</h3>
                         <p>

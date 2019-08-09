@@ -5,8 +5,8 @@ import Landing from '../components/landing';
 import Sidebar from './../components/sidebar';
 import {navigate} from '@reach/router';
 // import {Pager} from 'react-bootstrap';
-import EventsPage from '../components/eventspage'
-
+// import EventsPage from './eventspage';
+import About from './../components/about';
 
 class Home extends React.Component{
     constructor(props) {
@@ -28,9 +28,8 @@ class Home extends React.Component{
                 {/* <EventsPage /> */}
                 <ReactPageScroller ref={c => this.reactPageScroller = c}>
                     <Landing/>
-                    {(this.state.show)?<Landing/>:null}
-                    {/* <Landing/>*/}
-
+                    <About/>
+                    
                  </ReactPageScroller> 
             </div>
         )
