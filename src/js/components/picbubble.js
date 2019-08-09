@@ -11,24 +11,24 @@ class PicBubble extends React.Component{
 
     render = ()=>{
         
-        let list=[
-            {
-                name: "Nitin",
-                desc: "Web dev",
-                capsule: capsule
-            },
-            {
-                name: "Nitin",
-                desc: "Web dev",
-                capsule: capsule
-            },
-            {
-                name: "Nitin",
-                desc: "Web dev",
-                capsule: capsule
-            }
-        ]
-
+        // let list=[
+        //     {
+        //         name: "Nitin",
+        //         desc: "Web dev",
+        //         capsule: capsule
+        //     },
+        //     {
+        //         name: "Nitin",
+        //         desc: "Web dev",
+        //         capsule: capsule
+        //     },
+        //     {
+        //         name: "Nitin",
+        //         desc: "Web dev",
+        //         capsule: capsule
+        //     }
+        // ]
+        let list=this.props.details;
         let main = <div></div>
         main = list.map((ele)=>{
             return(
