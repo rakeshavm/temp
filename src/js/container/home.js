@@ -7,6 +7,7 @@ import {navigate} from '@reach/router';
 // import {Pager} from 'react-bootstrap';
 // import EventsPage from './eventspage';
 import About from './../components/about';
+import Animation from '../components/animation';
 
 class Home extends React.Component{
     constructor(props) {
@@ -27,6 +28,7 @@ class Home extends React.Component{
                 <Sidebar navigate={navigate}/>
                 {/* <EventsPage /> */}
                 <ReactPageScroller ref={c => this.reactPageScroller = c}>
+                    <Animation/>
                     <Landing/>
                     <About/>
                     

@@ -1,0 +1,149 @@
+body {
+    background: url(../svg/Main_background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.bulb{
+    animation: blink 2s 2.5s;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0
+    }
+    15%{
+        opacity: 1
+    }
+    30%{
+        opacity: 0
+    }
+    45%{
+        opacity: 1
+    }
+    60%{
+        opacity: 0
+    }
+    100%{
+        opacity: 1
+    }
+}
+
+#curr{
+    position: absolute;
+}
+
+.svg-holder{
+    position: absolute;
+    top:50vh;
+}
+
+.commondiv{
+    transition: all .3s ease-in-out;
+    height: 800px;
+    width: 800px;
+    max-width: 800px;
+    min-width: 800px;
+    -webkit-transform: rotate(-67.5deg);
+    transform: rotate(-67.5deg);
+}
+
+#lastdiv .startspan {
+
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #3f4448 transparent transparent #3f4448;
+    -webkit-animation-name: spinit1;
+    animation-name: spinit1;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: cubic-bezier(.7, 0, .3, 1);
+    animation-timing-function: cubic-bezier(.7, 0, .3, 1);
+    -webkit-transition: all 0.4s cubic-bezier(.19, 1, .22, 1);
+    transition: all 0.4s cubic-bezier(.19, 1, .22, 1)
+}
+
+.herosplash1 #herosplash {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transition: all .3s ease;
+    color: #fff;
+    background-size: auto 50%, 80% 55%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#herosplash {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    position: absolute;
+}
+
+
+#hypno {
+    opacity: 0.99;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@keyframes spinit1 {
+    2% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    48% {
+        -webkit-transform: rotate(179.99deg);
+        transform: rotate(179.99deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(179.99deg);
+        transform: rotate(179.99deg);
+    }
+
+    98% {
+        -webkit-transform: rotate(359.99deg);
+        transform: rotate(359.99deg);
+    }
+}
+
+@keyframes enter{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
