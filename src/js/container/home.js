@@ -14,22 +14,29 @@ class Home extends React.Component{
         super(props);
         this.state = {currentPage: 1,show:true};
         this._pageScroller = null;
+        this.change = 0;
     }
 
 
     goToPage = (pageNumber) => {
         this.reactPageScroller.goToPage(pageNumber);
       }
+
     
 
     render = ()=>{
+
+        // if(this.reactPageScroller.pageOnChange()){
+        //     console.log('works');
+        // }
+
         return(
             <div>
                 <Sidebar navigate={navigate}/>
                 {/* <EventsPage /> */}
                 <ReactPageScroller ref={c => this.reactPageScroller = c}>
-                    <Animation/>
-                    <Landing/>
+                    <Animation />
+                    <Landing />
                     <About/>
                     
                  </ReactPageScroller> 
