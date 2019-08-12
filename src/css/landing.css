@@ -1,11 +1,23 @@
+body {
+    background: url(../svg/Main_background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    will-change: tranform, opacity;
+}
 
-.landing{
-    
+.appear{
+    transform: translateZ(10px);
+    color: orangered;
+}
+
+.landing {
+
     height: 100vh;
     border: 2px solid red;
-    
+
     /* background-image: url(./../svg/Background.svg); */
-    
+
     /* background: #0F2027;  fallback for old browsers */
     /* background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  Chrome 10-25, Safari 5.1-6 */
     /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -13,7 +25,6 @@
     /* background-image: linear-gradient(to right, black, rgb(131, 131, 134) 400px, black 800px);
     background-size: cover;
     background-position: 50% 100%; */
-    
+
     background-repeat: no-repeat;
 }
-

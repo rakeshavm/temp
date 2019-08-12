@@ -4,46 +4,72 @@ import Landing from '../components/landing';
 // import poly from './../../svg/poly.svg';
 import Sidebar from './../components/sidebar';
 import {navigate} from '@reach/router';
-// import {Pager} from 'react-bootstrap';
-// import EventsPage from './eventspage';
+// import {Pager} from 'react-bootstrap'; import EventsPage from './eventspage';
 import About from './../components/about';
 import Animation from '../components/animation';
+import PropTypes from 'prop-types'
 
-class Home extends React.Component{
+class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {currentPage: 1,show:true};
+        this.state = {
+            currentPage: 1,
+            show: true,
+            scrollup : false,
+            scrolldwn : false
+        };
         this._pageScroller = null;
-        this.change = 0;
     }
 
+    static propTypes = {
+        currentPage : PropTypes.number
+    }
 
     goToPage = (pageNumber) => {
-        this.reactPageScroller.goToPage(pageNumber);
-      }
+        this
+            .reactPageScroller
+            .goToPage(pageNumber);
+    }
 
-    
+    blockScrollUp = () => {
+        this.setState({
+            scrollup:true
+        });
+        console.log('Scrolled Up')
+    }
+    blockScrollDown = () => {
+        if(!this.scrolldwn){
+            this.setState({scrolldwn:!this.scrolldwn})
+        }
+        console.log('Scrolled Down')
+    }
+    pageOnChange = (number) => {
 
-    render = ()=>{
-
-        // if(this.reactPageScroller.pageOnChange()){
-        //     console.log('works');
+        // if (this.currentPage === 1) {
+        //     console.log('Reached 2 via 1?');
         // }
+        // console.log(this.currentPage)
+        this.setState({currentPage: number});
+        console.log()
+    };
 
-        return(
+    render = () => {
+
+        return (
             <div>
-                <Sidebar navigate={navigate}/>
-                {/* <EventsPage /> */}
-                <ReactPageScroller ref={c => this.reactPageScroller = c}>
-                    <Animation />
-                    <Landing />
+                <Sidebar navigate={navigate}/> {/* <EventsPage /> */}
+                <ReactPageScroller
+                    ref={c => this.reactPageScroller = c}
+                    pageOnChange={this.pageOnChange}
+                >
+                    <Animation/>
+                    <Landing/>
                     <About/>
-                    
-                 </ReactPageScroller> 
+
+                </ReactPageScroller>
             </div>
         )
     }
 }
-
 
 export default Home;

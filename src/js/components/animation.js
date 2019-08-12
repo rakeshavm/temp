@@ -8,15 +8,21 @@ class Animation extends React.Component {
         setTimeout(() => {
             document
                 .querySelector('#thirst')
-                .style = "position: absolute;top: 10vh;opacity: 1;transition:ease-in 1s;animation: enter 3" +
-                    "s;left: 0;";
+                .style = "position: absolute;top: 30vh;left:25vw;width:50vw;height:50vh;opacity: 1;transition:ease-in 1s;animation: enter 2" +
+                    "s;";
         }, 25)
 
         setTimeout(() => {
             document
                 .querySelector('#thirst')
-                .style = "animation: exit 1s";
+                .style = "animation: exit 1s;top: 30vh;left:25vw;width:50vw;height:50vh;";
         }, 3000);
+
+        setTimeout(() => {
+            document
+                .querySelector('#thirst')
+                .style = "display: none";
+        }, 4000);
 
         Array
             .from(document.querySelectorAll("span"))
@@ -38,8 +44,8 @@ class Animation extends React.Component {
         setTimeout(() => {
             document
                 .querySelector("#title")
-                .style = "opacity:1;transition:2s ease-in;position:absolute;top:70vh;left:32vw;width:35vw;" +
-                    "height:30vh"
+                .style = "opacity:1;transition:2s ease-in;position:absolute;top:60vh;left:32vw;width:35vw;" +
+                    "height:35vh"
         }, 6000);
         setTimeout(() => {
             document
@@ -50,7 +56,7 @@ class Animation extends React.Component {
         setTimeout(() => {
             document
                 .querySelector("#bulb")
-                .style = "position:absolute;top:25vh;left:25vw;width: 50vw;height: 50vh;opacity:1";
+                .style = "position:absolute;top:25vh;left:30vw;width: 40vw;height: 40vh;opacity:1";
         }, 6000);
 
     }
@@ -87,17 +93,6 @@ class Animation extends React.Component {
                 <img src={require("../../svg/Main_background.svg")} alt="bg" style={bg}/>
                 <img src={require("../../svg/Right_ball.svg")} alt="rball" style={rball}/>
                 <img src={require("../../svg/Left_ball.svg")} alt="lball" style={lball}/>
-                <img
-                    src={require("../../svg/Thirst for tech.svg")}
-                    alt="thirst"
-                    id="thirst"
-                    style={{
-                    opacity: "0",
-                    position: "absolute",
-                    top: "10vh",
-                    left: "0",
-                    transform: "translateZ(100px)"
-                }}/>
                 <img src={require("../../svg/Logo_bulb.svg")} alt="logo" id="bulb"/>
                 <img
                     src={require("../../svg/logo_text_with_tagline.svg")}
@@ -128,6 +123,19 @@ class Animation extends React.Component {
                         </div>
                     </div>
                 </div>
+                <img
+                    src={require("../../svg/Thirst for tech.svg")}
+                    alt="thirst"
+                    id="thirst"
+                    style={{
+                    opacity: "0",
+                    position: "absolute",
+                    top: "30vh",
+                    left: "25vw",
+                    width:"50vw",
+                    height:"50vh",
+                    transform: "translateZ(100px)"
+                }}/>
             </div>
 
         )

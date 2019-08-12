@@ -78,7 +78,7 @@ class Landing extends React.Component{
     renderDots(){
 
         return(
-            <div className="dotstyle dotstyle-dotmove">
+            <div className="dotstyle dotstyle-dotmove appear">
             <ul>
                 <li className="current"><a href="/">Home</a></li>
                 <li><a href="/">About</a></li>

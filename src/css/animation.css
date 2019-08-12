@@ -39,9 +39,9 @@ body {
     100% {
         opacity: 1;
         top:25vh;
-        left:25vw;
-        width: 50vw;
-        height: 50vh;
+        left:30vw;
+        width: 40vw;
+        height: 40vh;
     }
 }
 
@@ -77,7 +77,7 @@ body {
     border-radius: 50%;
     border-style: solid;
     border-width: 8px;
-    border-color: #3b3933 transparent transparent #3b3933;
+    border-color: #2f2e2a transparent transparent #2f2e2a;
     -webkit-animation-name: spinit1;
     animation-name: spinit1;
     -webkit-animation-duration: 4s;
