@@ -3,26 +3,59 @@ import '../../css/animation.css';
 
 class Animation extends React.Component {
 
+    componentDidUpdate = () => {
+
+        if (this.props.scrollup === true) {
+            document
+                .querySelector('#lball')
+                .style = "animation:inleft 1s;position:absolute;top:-10vh;left:54vw;width:78vw;height:72vw" +
+                    ";overflow:hidden;"
+            document
+                .querySelector("#rball")
+                .style = "animation:inright 1s;position:absolute;top:-10vh;left:-30vw;width:78vw;height:72" +
+                    "vw;overflow:hidden;";
+        }
+        if (this.props.scrolldwn === true) {
+            document
+                .querySelector('#lball')
+                .style = "animation:outleft 1s;position:absolute;top:-10vh;left:54vw;width:78vw;height:72v" +
+                    "w;overflow:hidden;"
+            document
+                .querySelector("#rball")
+                .style = "animation:outright 1s;position:absolute;top:-10vh;left:-30vw;width:78vw;height:7" +
+                    "2vw;overflow:hidden;";
+        }
+        if (this.props.currentPage === 2) {
+            setTimeout(() => {
+                document
+                    .querySelector("#rball")
+                    .style = "opacity:0";
+                document
+                    .querySelector("#lball")
+                    .style = "opacity:0";
+            },1000);
+        }
+    }
     componentDidMount() {
 
         setTimeout(() => {
             document
                 .querySelector('#thirst')
-                .style = "position: absolute;top: 30vh;left:25vw;width:50vw;height:50vh;opacity: 1;transition:ease-in 1s;animation: enter 2" +
-                    "s;";
+                .style = "position: absolute;top: 30vh;left:25vw;width:50vw;height:50vh;opacity: 1;transit" +
+                    "ion:ease-in 1s;animation: enter 1s;";
         }, 25)
 
         setTimeout(() => {
             document
                 .querySelector('#thirst')
                 .style = "animation: exit 1s;top: 30vh;left:25vw;width:50vw;height:50vh;";
-        }, 3000);
+        }, 2000);
 
         setTimeout(() => {
             document
                 .querySelector('#thirst')
                 .style = "display: none";
-        }, 4000);
+        }, 2000);
 
         Array
             .from(document.querySelectorAll("span"))
@@ -91,8 +124,16 @@ class Animation extends React.Component {
         return (
             <div style={sdiv}>
                 <img src={require("../../svg/Main_background.svg")} alt="bg" style={bg}/>
-                <img src={require("../../svg/Right_ball.svg")} alt="rball" style={rball}/>
-                <img src={require("../../svg/Left_ball.svg")} alt="lball" style={lball}/>
+                <img
+                    src={require("../../svg/Right_ball.svg")}
+                    alt="rball"
+                    style={rball}
+                    id="rball"/>
+                <img
+                    src={require("../../svg/Left_ball.svg")}
+                    alt="lball"
+                    style={lball}
+                    id="lball"/>
                 <img src={require("../../svg/Logo_bulb.svg")} alt="logo" id="bulb"/>
                 <img
                     src={require("../../svg/logo_text_with_tagline.svg")}
@@ -132,8 +173,8 @@ class Animation extends React.Component {
                     position: "absolute",
                     top: "30vh",
                     left: "25vw",
-                    width:"50vw",
-                    height:"50vh",
+                    width: "50vw",
+                    height: "50vh",
                     transform: "translateZ(100px)"
                 }}/>
             </div>
